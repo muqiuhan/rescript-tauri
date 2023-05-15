@@ -1,9 +1,11 @@
 {
-  "name": "rescript-tauir",
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
+  "name": "rescript-tauri",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
   "package-specs": {
     "module": "commonjs",
     "in-source": true

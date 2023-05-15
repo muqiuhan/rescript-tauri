@@ -23,8 +23,8 @@ dist-ssr
 *.sw?
 
 # ReScript
-/lib
-/types
+lib/
+types/
 .merlin
 *.bs.js
 .bsb.lock

@@ -1,7 +1,11 @@
 @module("./assets/react.svg") external reactLogo: string = "default"
-%%raw(`import './App.css'`)
+%%raw(`import './Test_Tauri.css'`)
 
 open Promise
+
+module Test_App = {
+  include Test_App
+}
 
 @react.component
 let make = () => {

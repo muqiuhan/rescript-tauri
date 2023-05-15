@@ -4,10 +4,6 @@
     {
       "dir": "src",
       "subdirs": true
-    },
-    {
-      "dir": "../src",
-      "subdirs": true
     }
   ],
   "package-specs": [
@@ -23,6 +19,7 @@
   "bs-dependencies": [
     "@rescript/react",
     "@ryyppy/rescript-promise",
-    "rescript-webapi"
+    "rescript-webapi",
+    "rescript-tauri"
   ]
 }

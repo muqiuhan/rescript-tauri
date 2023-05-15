@@ -1,5 +1,5 @@
 {
-  "name": "{{package_name}}",
+  "name": "test_rescript_tauri",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "tauri": "tauri",
+    "tauri": "cargo-tauri",
     "clean": "rescript clean -with-deps",
     "format": "rescript format -all"
   },
@@ -17,7 +17,8 @@
     "@tauri-apps/api": "^1.1.0",
     "@rescript/react": "^0.11.0-rc.2",
     "@ryyppy/rescript-promise": "^2.1.0",
-    "rescript-webapi": "^0.6.1"
+    "rescript-webapi": "^0.6.1",
+    "rescript-tauri": "file:../"
   },
   "devDependencies": {
     "@jihchi/vite-plugin-rescript": "^4.1.0",

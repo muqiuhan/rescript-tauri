@@ -1,8 +1,8 @@
 [package]
-name = "{{package_name}}"
+name = "test_rescript_tauri"
 version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "test rescript tauri"
+authors = ["Muqiu Han"]
 license = ""
 repository = ""
 edition = "2021"
