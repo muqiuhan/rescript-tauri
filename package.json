@@ -1,0 +1,20 @@
+{
+  "name": "rescript-tauri",
+  "version": "0.0.1",
+  "scripts": {
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:dev": "rescript build -w",
+    "res:test": "cd test && pnpm run dev"
+  },
+  "keywords": [
+    "rescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "rescript": "*",
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "@tauri-apps/api": "^1.1.0"
+  }
+}
