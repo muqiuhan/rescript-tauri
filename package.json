@@ -14,7 +14,6 @@
   "license": "MIT",
   "dependencies": {
     "rescript": "*",
-    "@ryyppy/rescript-promise": "^2.1.0",
     "@tauri-apps/api": "^1.1.0"
   }
 }

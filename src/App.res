@@ -21,30 +21,30 @@
 
 /// Gets the application name.
 /// Since: 1.0.0
-/// Returns: Promise<string>
+/// Returns: promise<string>
 @module("@tauri-apps/api/app")
-external getName: unit => Promise.t<string> = "getName"
+external getName: unit => promise<string> = "getName"
 
 /// Gets the Tauri version.
 /// Since: 1.0.0
-/// Returns: Promise<string>
+/// Returns: promise<string>
 @module("@tauri-apps/api/app")
-external getTauriVersion: unit => Promise.t<string> = "getTauriVersion"
+external getTauriVersion: unit => promise<string> = "getTauriVersion"
 
 /// Gets the application version.
 /// Since: 1.0.0
-/// Returns: Promise<string>
+/// Returns: promise<string>
 @module("@tauri-apps/api/app")
-external getVersion: unit => Promise.t<string> = "getVersion"
+external getVersion: unit => promise<string> = "getVersion"
 
 /// Hides the application on macOS.
 /// Since: 1.2.0
-/// Returns: Promise<unit>
+/// Returns: promise<unit>
 @module("@tauri-apps/api/app")
-external hide: unit => Promise.t<unit> = "hide"
+external hide: unit => promise<unit> = "hide"
 
 /// Shows the application on macOS. This function does not automatically focus any specific app window.
 /// Since: 1.2.0
-/// Returns: Promise<unit>
+/// Returns: promise<unit>
 @module("@tauri-apps/api/app")
-external show: unit => Promise.t<unit> = "show"
+external show: unit => promise<unit> = "show"
