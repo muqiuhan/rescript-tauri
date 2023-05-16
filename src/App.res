@@ -41,10 +41,10 @@ external getVersion: unit => Promise.t<string> = "getVersion"
 /// Since: 1.2.0
 /// Returns: Promise<unit>
 @module("@tauri-apps/api/app")
-external hide: unit => Promise.t<'a> = "hide"
+external hide: unit => Promise.t<unit> = "hide"
 
 /// Shows the application on macOS. This function does not automatically focus any specific app window.
 /// Since: 1.2.0
 /// Returns: Promise<unit>
 @module("@tauri-apps/api/app")
-external show: unit => Promise.t<'a> = "show"
+external show: unit => Promise.t<unit> = "show"

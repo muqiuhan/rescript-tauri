@@ -5,7 +5,7 @@
     "res:build": "rescript",
     "res:clean": "rescript clean",
     "res:dev": "rescript build -w",
-    "res:test": "cd test && pnpm run dev"
+    "test": "cd test && pnpm run tauri dev"
   },
   "keywords": [
     "rescript"
