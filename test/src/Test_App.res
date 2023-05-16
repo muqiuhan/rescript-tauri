@@ -1,11 +1,11 @@
 open App
 
-Test.test("App.getName", "test_rescript_tauri", await getName())
+Test.test("App.hide", "()", hide()->Promise.thenResolve(result => Js.String.make(result)))
 
-Test.test("App.getTauriVersion", "1.1.1", await getTauriVersion())
+Test.test("App.show", "()", show()->Promise.thenResolve(result => Js.String.make(result)))
 
-Test.test("App.getVersion", "0.0.0", await getVersion())
+Test.test("App.getName", "test_rescript_tauri", getName())
 
-Test.test("App.hide", "()", Js.String.make(await hide()))
+Test.test("App.getTauriVersion", "1.1.1", getTauriVersion())
 
-Test.test("App.show", "()", Js.String.make(await show()))
+Test.test("App.getVersion", "0.0.0", getVersion())

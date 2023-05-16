@@ -12,12 +12,13 @@
     "format": "rescript format -all"
   },
   "dependencies": {
+    "@rescript/react": "^0.11.0-rc.2",
+    "@ryyppy/rescript-promise": "^2.1.0",
+    "@tauri-apps/api": "^1.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tauri-apps/api": "^1.1.0",
-    "@rescript/react": "^0.11.0-rc.2",
-    "rescript-webapi": "^0.6.1",
-    "rescript-tauri": "file:../"
+    "rescript-tauri": "file:../",
+    "rescript-webapi": "^0.6.1"
   },
   "devDependencies": {
     "@jihchi/vite-plugin-rescript": "^4.1.0",

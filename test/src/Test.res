@@ -18,9 +18,13 @@ let ok = function_name => {
 }
 
 let test = (function_name, expected_value, actual_value) => {
-  if actual_value != expected_value {
-    fail(function_name, expected_value, actual_value)
-  } else {
-    ok(function_name)
-  }
+  Js.Console.log("Test " ++ function_name ++ " ...")
+  actual_value
+  ->Promise.thenResolve(actual_value => {
+    if actual_value != expected_value {
+      fail(function_name, expected_value, actual_value)
+    } else {
+      ok(function_name)
+    }
+  }) |> ignore
 }

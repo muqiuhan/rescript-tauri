@@ -19,6 +19,7 @@
   "bs-dependencies": [
     "@rescript/react",
     "rescript-webapi",
-    "rescript-tauri"
+    "rescript-tauri",
+    "@ryyppy/rescript-promise"
   ]
 }
