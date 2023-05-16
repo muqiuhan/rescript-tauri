@@ -44,7 +44,7 @@ __WIP__
 > This package is also accessible with window.__TAURI__.app when build.withGlobalTauri in tauri.conf.json is set to true.
 > 
 > The APIs must be added to tauri.allowlist.app in tauri.conf.json:
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -107,7 +107,7 @@ show(): Promise<void>
 > This package is also accessible with `window.__TAURI__.clipboard` when build.withGlobalTauri in tauri.conf.json is set to true.
 > 
 > The APIs must be added to tauri.allowlist.clipboard in tauri.conf.json:
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -128,7 +128,7 @@ show(): Promise<void>
 > This package is also accessible with `window.__TAURI__.dialog` when build.withGlobalTauri in tauri.conf.json is set to true.
 > 
 > The APIs must be added to tauri.allowlist.dialog in tauri.conf.json:
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -157,7 +157,7 @@ show(): Promise<void>
 > This package is also accessible with `window.__TAURI__.fs` when build.withGlobalTauri in tauri.conf.json is set to true.
 > 
 > The APIs must be added to tauri.allowlist.fs in tauri.conf.json:
-> ```
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -185,7 +185,7 @@ show(): Promise<void>
 > This package is also accessible with `window.__TAURI__.globalShortcut` when build.withGlobalTauri in tauri.conf.json is set to true.
 > 
 > The APIs must be added to tauri.allowlist.globalShortcut in tauri.conf.json:
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -205,7 +205,7 @@ show(): Promise<void>
 > 
 > The APIs must be allowlisted on tauri.conf.json:
 >
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -224,7 +224,7 @@ show(): Promise<void>
 > 
 > For instance, this scope configuration only allows making HTTP requests to the GitHub API for the tauri-apps organization:
 >
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -247,7 +247,7 @@ show(): Promise<void>
 > 
 > The APIs must be added to tauri.allowlist.notification in tauri.conf.json:
 >
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -266,7 +266,7 @@ show(): Promise<void>
 > This package is also accessible with `window.__TAURI__.os` when build.withGlobalTauri in tauri.conf.json is set to true.
 > 
 > The APIs must be added to tauri.allowlist.os in tauri.conf.json:
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -286,7 +286,7 @@ show(): Promise<void>
 > 
 > The APIs must be added to tauri.allowlist.path in tauri.conf.json:
 >
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -311,7 +311,7 @@ show(): Promise<void>
 > 
 > The APIs must be added to tauri.allowlist.shell in tauri.conf.json:
 >
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
@@ -349,7 +349,7 @@ show(): Promise<void>
 > CLI: git commit -m "the commit message"
 > 
 > Configuration:
-> ```json
+> ```javascript
 > {
 >   "scope": [
 >     {
@@ -362,7 +362,7 @@ show(): Promise<void>
 > ```
 > Usage:
 >
-> ```js
+> ```javascript
 > import { Command } from '@tauri-apps/api/shell'
 > new Command('run-git-commit', ['commit', '-m', 'the commit message'])
 > ```
@@ -386,7 +386,7 @@ show(): Promise<void>
 > 
 > The APIs must be added to tauri.allowlist.window in tauri.conf.json:
 >
-> ```json
+> ```javascript
 > {
 >   "tauri": {
 >     "allowlist": {
