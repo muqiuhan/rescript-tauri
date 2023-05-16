@@ -16,3 +16,14 @@ let fail = (function_name, expected_value, actual_value) => {
 let ok = function_name => {
   Js.Console.info("Test " ++ function_name ++ "...ok!")
 }
+
+let test = (function_name, expected_value, actual_value) => {
+  actual_value
+  ->Promise.thenResolve(actual_value => {
+    if actual_value != expected_value {
+      fail(function_name, expected_value, actual_value)
+    } else {
+      ok(function_name)
+    }
+  }) |> ignore
+}

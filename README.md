@@ -6,7 +6,7 @@
 
 *The tauri/api bindings for rescript*
 
-__WIP__
+__WIP: This project is developed in [The X-Files Research Institute](https://github.com/X-FRI/rescript-tauri)__
 
 </div>
 
@@ -65,21 +65,21 @@ __WIP__
 Gets the application name.
 
 ```rescript
-getName: unit => Promise<string>
+getName: unit => Promise.t<string>
 ```
 
 ##### getTauriVersion
 Gets the Tauri version.
 
 ```rescript
-getTauriVersion: unit => Promise<string>
+getTauriVersion: unit => Promise.t<string>
 ```
 
 ##### getVersion
 Gets the application version.
 
 ```rescript
-getVersion: unit => Promise<string>
+getVersion: unit => Promise.t<string>
 ```
 
 
@@ -87,14 +87,14 @@ getVersion: unit => Promise<string>
 Hides the application on macOS.
 
 ```rescript
-hide: unit => Promise<unit>
+hide: unit => Promise.t<unit>
 ```
 
 ##### show
 Shows the application on macOS. This function does not automatically focus any specific app window.
 
 ```rescript
-show(): Promise<void>
+show(): Promise.t<unit>
 ```
 ### Cli
 > Parse arguments from your Command Line Interface.
@@ -121,6 +121,19 @@ show(): Promise<void>
 > }
 > ```
 > It is recommended to allowlist only the APIs you use for optimal bundle size and security.
+
+#### Functions
+##### readText
+Gets the clipboard content as plain text.
+```rescript
+readText(): unit => Promise.t<option<string>>
+```
+
+##### writeText
+Writes plain text to the clipboard.
+```rescript
+write(): string => Promise.t<unit>
+```
 
 ### Dialog
 > Native system dialogs for opening and saving files.
