@@ -6,7 +6,7 @@
 
 *The tauri/api bindings for rescript*
 
-__WIP__
+__WIP: This project is developed in [The X-Files Research Institute](https://github.com/X-FRI/rescript-tauri)__
 
 </div>
 
