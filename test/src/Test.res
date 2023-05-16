@@ -18,7 +18,6 @@ let ok = function_name => {
 }
 
 let test = (function_name, expected_value, actual_value) => {
-  Js.Console.log("Test " ++ function_name ++ " ...")
   actual_value
   ->Promise.thenResolve(actual_value => {
     if actual_value != expected_value {

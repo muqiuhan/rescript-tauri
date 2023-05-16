@@ -9,4 +9,4 @@ let make = () => {
 }
 
 module Test_App = { include Test_App }
-module Test_Cli = { include Test_Cli }
+module Test_Clipboard = { include Test_Clipboard } 

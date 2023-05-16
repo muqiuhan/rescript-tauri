@@ -1,6 +1,6 @@
 {
   "name": "rescript-tauri",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "res:build": "rescript",
     "res:clean": "rescript clean",
