@@ -35,7 +35,7 @@ external register: string => shortcut_handler => Promise.t<unit> = "register"
 /// Since: 1.0.0
 /// Return: Promise.t<unit>
 @module("@tauri-apps/api/globalShortcut")
-external registerAll: list<string> => shortcut_handler => Promise.t<unit> = "registerAll"
+external registerAll: array<string> => shortcut_handler => Promise.t<unit> = "registerAll"
 
 
 /// Unregister a global shortcut.
@@ -49,4 +49,4 @@ external unregister: string => Promise.t<unit> = "unregister"
 /// Since: 1.0.0
 /// Return: Promise.t<unit>
 @module("@tauri-apps/api/globalShortcut")
-external unregisterAll: list<string> => Promise.t<unit> = "unregisterAll"
+external unregisterAll: array<string> => Promise.t<unit> = "unregisterAll"
