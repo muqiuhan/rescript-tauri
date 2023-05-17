@@ -33,16 +33,14 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 - [@tauri-apps/api](https://npm.io/package/@tauri-apps/api): `^1.1.0"`
 - [rescript](https://npm.io/package/rescript): `*`
 
-## Progress
-
-### @tauri-apps/api
-- [x] app
+## Bindings progress for `@tauri-apps/api v1`
+- [x] [app](#app): Get application metadata.
 - [ ] cli
-- [x] clipboard
+- [x] [clipboard](#clipboard): Read and write to the system clipboard.
 - [ ] dialog
 - [ ] event
 - [ ] fs
-- [x] globalShortcut
+- [x] [globalShortcut](#globalshortcut): Register global shortcuts.
 - [ ] http
 - [ ] mocks
 - [ ] notification
