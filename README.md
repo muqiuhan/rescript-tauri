@@ -28,6 +28,31 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 
 </a>
 
+## Dependencies
+- [@ryyppy/rescript-promise](about:blank): `^2.1.0`
+- [@tauri-apps/api](https://npm.io/package/@tauri-apps/api): `^1.1.0"`
+- [rescript](https://npm.io/package/rescript): `*`
+
+## Bindings progress for `@tauri-apps/api v1`
+- [x] [app](#app): Get application metadata.
+- [ ] cli
+- [x] [clipboard](#clipboard): Read and write to the system clipboard.
+- [ ] dialog
+- [ ] event
+- [ ] fs
+- [x] [globalShortcut](#globalshortcut): Register global shortcuts.
+- [ ] http
+- [ ] mocks
+- [ ] notification
+- [ ] os
+- [ ] path
+- [ ] process
+- [ ] shell
+- [ ] tauri
+- [ ] updater
+- [ ] window
+
+
 ## Test
 
 1. For test this project, please install tauri first: [https://tauri.app/v1/guides/getting-started/setup](https://tauri.app/v1/guides/getting-started/setup)
@@ -210,6 +235,48 @@ write(): string => Promise.t<unit>
 > }
 > ```
 > It is recommended to allowlist only the APIs you use for optimal bundle size and security.
+
+#### Type Aliases
+##### shortcut_handler
+```rescript
+type shortcut_handler = string => unit
+```
+
+#### Functions
+##### isRegistered
+Determines whether the given shortcut is registered by this application or not.
+
+```rescript
+isRegistered: string => Promise.t<bool>
+```
+
+##### register
+Register a global shortcut.
+
+```rescript
+register: string => shortcut_handler => Promise.t<unit>
+```
+
+##### registerAll
+Register a collection of global shortcuts.
+
+```rescript
+isRegistered: array<string> => shortcut_handler => Promise.t<unit>
+```
+
+##### unregister
+Unregister a global shortcut.
+
+```rescript
+unregister: string => Promise.t<unit>
+```
+
+##### unregisterAll
+Unregisters all shortcuts registered by the application.
+
+```rescript
+unregisterAll: array<string> => Promise.t<unit>
+```
 
 ### Http
 > Access the HTTP client written in Rust.
