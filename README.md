@@ -44,7 +44,7 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 - [ ] http
 - [ ] mocks
 - [ ] notification
-- [ ] os
+- [x] os
 - [ ] path
 - [ ] process
 - [ ] shell
