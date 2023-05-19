@@ -44,7 +44,7 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 - [ ] http
 - [ ] mocks
 - [ ] notification
-- [x] os
+- [x] [os](#os)
 - [ ] path
 - [ ] process
 - [ ] shell
@@ -340,7 +340,7 @@ unregisterAll: array<string> => Promise.t<unit>
 > ```
 > It is recommended to allowlist only the APIs you use for optimal bundle size and security.
 
-### Os
+### OS
 > Provides operating system-related utility methods and properties.
 > 
 > This package is also accessible with `window.__TAURI__.os` when build.withGlobalTauri in tauri.conf.json is set to true.
@@ -358,6 +358,109 @@ unregisterAll: array<string> => Promise.t<unit>
 > }
 > ```
 > It is recommended to allowlist only the APIs you use for optimal bundle size and security.
+
+#### Type Aliases
+##### Arch
+```rescript
+module Arch = {
+  type t =
+    | X86
+    | X86_64
+    | Arm
+    | AArch64
+    | Mips
+    | Mips64
+    | Powerpc
+    | Powerpc64
+    | Riscv64
+    | S390x
+    | Sparc64
+
+  ...
+}
+```
+
+##### OSType
+```rescript
+module OSType = {
+  type t =
+    | Linux
+    | Darwin
+    | Windows_NT
+
+  ...
+}
+```
+
+##### Platform
+```rescript
+module Platform = {
+  type t =
+    | Linux
+    | Darwin
+    | Ios
+    | Freebsd
+    | Dragonfly
+    | Netbsd
+    | Openbsd
+    | Solaris
+    | Android
+    | Win32
+
+  ...
+}
+```
+
+#### Variables
+##### EOL
+> The operating system-specific end-of-line marker.
+
+```rescript
+module EOL = {
+  let posix = "\n"
+  let windows = "\r\n"
+}
+```
+
+#### Functions
+##### arch
+Returns the operating system CPU architecture for which the tauri app was compiled.
+Possible values are X86, X86_64, Arm, AArch64, Mips, Mips64, Powerpc, Powerpc64, Riscv64, S390x, Sparc64.
+
+```rescript
+arch: unit => Promise.t<Arch.t>
+```
+
+##### os_type
+Returns a string identifying the operating system platform.
+Possible values are Linux, Darwin, Ios, Freebsd, Dragonfly, Netbsd, Openbsd, Solaris, Android, Win32.
+
+```rescript
+os_type: unit => Promise.t<OSType.t>
+```
+
+##### platform
+Returns a string identifying the operating system platform.
+Possible values are Linux, Darwin, Ios, Freebsd, Dragonfly, Netbsd, Openbsd, Solaris, Android, Win32.
+
+```rescript
+platform: unit => Promise.t<Platform.t>
+```
+
+##### version
+Returns a string identifying the kernel version.
+
+```rescript
+version: unit => Promise.t<string>
+```
+
+##### tempdir
+Returns the operating system's default directory for temporary files as a string.
+
+```rescript
+tempdir: unit => Promise.t<string>
+```
+
 
 ### Path
 > The path module provides utilities for working with file and directory paths.

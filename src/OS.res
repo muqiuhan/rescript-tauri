@@ -165,9 +165,11 @@ module Platform = {
   }
 }
 
-type eol =
-  | POSIX
-  | Windows
+/// The operating system-specific end-of-line marker.
+module EOL = {
+  let posix = "\n"
+  let windows = "\r\n"
+}
 
 /// Returns the operating system CPU architecture for which the tauri app was compiled.
 /// Possible values are X86, X86_64, Arm, AArch64, Mips, Mips64, Powerpc, Powerpc64, Riscv64, S390x, Sparc64
