@@ -11,3 +11,4 @@ let make = () => {
 module Test_App = { include Test_App }
 module Test_Clipboard = { include Test_Clipboard } 
 module Test_Globalshortcut = { include Test_Globalshortcut }
+module Test_OS = { include Test_OS }

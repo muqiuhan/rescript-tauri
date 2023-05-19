@@ -189,3 +189,15 @@ let os_type = () => {
 let platform = () => {
   Tauri_OS.platform()->Promise.thenResolve(platform => Platform.of_string(platform))
 }
+
+/// Returns the operating system's default directory for temporary files as a string.
+/// Since: 1.0.0
+/// Returns: Promise.t<string>
+@module("@tauri-apps/api/os")
+external tempdir: unit => Promise.t<string> = "tempdir"
+
+/// Returns a string identifying the kernel version.
+/// Since: 1.0.0
+/// Returns: Promise.t<string>
+@module("@tauri-apps/api/os")
+external version: unit => Promise.t<string> = "version"
