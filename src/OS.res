@@ -29,6 +29,13 @@ module Tauri_OS = {
   /// Returns: Promise.t<string>
   @module("@tauri-apps/api/os")
   external os_type: unit => promise<string> = "type"
+
+  /// Returns a string identifying the operating system platform.
+  /// The value is set at compile time. Possible values are 'linux', 'darwin', 'ios', 'freebsd', 'dragonfly', 'netbsd', 'openbsd', 'solaris', 'android', 'win32'
+  /// Since: 1.0.0
+  /// Returns: Promise.t<string>
+  @module("@tauri-apps/api/os")
+  external platform: unit => promise<string> = "platform"
 }
 
 module Arch = {
@@ -108,17 +115,55 @@ module OSType = {
   }
 }
 
-type platform =
-  | Linux
-  | Darwin
-  | Ios
-  | Freebsd
-  | Dragonfly
-  | Netbsd
-  | Openbsd
-  | Solaris
-  | Android
-  | Win32
+module Platform = {
+  type t =
+    | Linux
+    | Darwin
+    | Ios
+    | Freebsd
+    | Dragonfly
+    | Netbsd
+    | Openbsd
+    | Solaris
+    | Android
+    | Win32
+
+  let to_string = platform => {
+    switch platform {
+    | Linux => "linux"
+    | Darwin => "darwin"
+    | Ios => "ios"
+    | Freebsd => "freebsd"
+    | Dragonfly => "dragonfly"
+    | Netbsd => "netbsd"
+    | Openbsd => "openbsd"
+    | Solaris => "soloris"
+    | Android => "android"
+    | Win32 => "win32"
+    }
+  }
+
+  let of_string = platform => {
+    switch platform {
+    | "linux" => Linux
+    | "darwin" => Darwin
+    | "ios" => Ios
+    | "freebsd" => Freebsd
+    | "dragonfly" => Dragonfly
+    | "netbsd" => Netbsd
+    | "openbsd" => Openbsd
+    | "soloris" => Solaris
+    | "android" => Android
+    | "win32" => Win32
+    | _ =>
+      raise(
+        Error.Tauri_error(
+          "Possible values are 'linux', 'darwin', 'ios', 'freebsd', 'dragonfly', 'netbsd', 'openbsd', 'solaris', 'android', 'win32'",
+        ),
+      )
+    }
+  }
+}
 
 type eol =
   | POSIX
@@ -132,7 +177,15 @@ let arch = () => {
 }
 
 /// Returns Linux on Linux, Darwin on macOS, and Windows_NT on Windows.
+/// Possible values are Linux, Darwin, Ios, Freebsd, Dragonfly, Netbsd, Openbsd, Solaris, Android, Win32
 /// Returns: Promise.t<OSType.t>
 let os_type = () => {
-  Tauri_OS.os_type()->Promise.thenResolve(arch => OSType.of_string(arch))
+  Tauri_OS.os_type()->Promise.thenResolve(os_type => OSType.of_string(os_type))
+}
+
+/// Returns a string identifying the operating system platform.
+/// Possible values are Linux, Darwin, Ios, Freebsd, Dragonfly, Netbsd, Openbsd, Solaris, Android, Win32
+/// Returns: Promise.t<Platform.t>
+let platform = () => {
+  Tauri_OS.platform()->Promise.thenResolve(platform => Platform.of_string(platform))
 }
