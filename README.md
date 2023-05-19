@@ -29,7 +29,7 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 </a>
 
 ## Dependencies
-- [@ryyppy/rescript-promise](about:blank): `^2.1.0`
+- [@ryyppy/rescript-promise](https://npm.io/package/@ryyppy/rescript-promise): `^2.1.0`
 - [@tauri-apps/api](https://npm.io/package/@tauri-apps/api): `^1.1.0"`
 - [rescript](https://npm.io/package/rescript): `*`
 
@@ -44,7 +44,7 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 - [ ] http
 - [ ] mocks
 - [ ] notification
-- [ ] os
+- [x] os
 - [ ] path
 - [ ] process
 - [ ] shell
