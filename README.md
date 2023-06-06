@@ -42,11 +42,11 @@ __WIP: This project is developed in [The X-Files Research Institute](https://git
 - [ ] fs
 - [x] [globalShortcut](#globalshortcut): Register global shortcuts.
 - [ ] http
-- [ ] mocks
+- [x] [mocks](#mocks)
 - [ ] notification
 - [x] [os](#os)
 - [ ] path
-- [ ] process
+- [x] [process](#process)
 - [ ] shell
 - [ ] tauri
 - [ ] updater
@@ -319,6 +319,29 @@ unregisterAll: array<string> => Promise.t<unit>
 
 
 ### Mocks
+#### Functions
+##### clearMocks
+Clears mocked functions/data injected by the other functions in this module.
+```rescript
+clearMocks: unit => unit = "clearMocks"
+```
+
+##### mockIPC
+Intercepts all IPC requests with the given mock handler.
+This function can be used when testing tauri frontend applications or when running the frontend in a Node.js context during static site generation.
+```rescript
+mockIPC: 'a => unit = "mockIPC"
+```
+
+##### mockWindows
+Mocks one or many window labels.
+In non-tauri context it is required to call this function before using the @tauri-apps/api/window module.
+This function only mocks the presence of windows, window properties (e.g. width and height)
+can be mocked like regular IPC calls using the mockIPC function.
+
+```rescript
+mockWindows: string => array<string> = "mockWindows"
+```
 
 ### Notification
 > Send toast notifications (brief auto-expiring OS window element) to your user. Can also be used with the Notification Web API.
