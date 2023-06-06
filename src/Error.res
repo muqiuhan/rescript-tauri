@@ -1,2 +1,2 @@
-/// 当Tauri由于某些原因导致Rescript Bindings出现问题时抛出
+/// Thrown when Tauri has problems with Rescript Bindings for some reason
 exception Tauri_error(string)
