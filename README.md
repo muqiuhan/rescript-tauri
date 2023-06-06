@@ -510,6 +510,23 @@ tempdir: unit => Promise.t<string>
 > 
 > This package is also accessible with `window.__TAURI__.process` when build.withGlobalTauri in tauri.conf.json is set to true.
 
+#### Functions
+##### relaunch
+Exits the current instance of the app then relaunches it.
+A promise indicating the success or failure of the operation.
+
+```rescript
+relaunch: int => Promise.t<unit> = "relaunch"
+```
+
+##### exit
+Exits immediately with the given exitCode.
+A promise indicating the success or failure of the operation.
+
+```rescript
+exit : ~(code: int=0) => Promise.t<unit>
+```
+
 ### Shell
 > Access the system shell. Allows you to spawn child processes and manage files and URLs using their default application.
 > 
